@@ -24,22 +24,17 @@ module.exports = function (config) {
       subdir: '.',
       reporters: [
         { type: 'html' },
-        { type: 'text-summary' }
+        { type: 'text-summary' },
+        { type: 'cobertura'}
       ]
-    },
-    coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/ng-azure-devops'),
-      reports: ['html', 'lcovonly', 'text-summary', 'cobertura'],
-      fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml', 'junit'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
     singleRun: false,
-    restartOnFileChange: true,
-    browsers: ['ChromeHeadless']
+    restartOnFileChange: true
   });
 };
