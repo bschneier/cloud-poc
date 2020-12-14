@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'cloud-poc'`, () => {
+  it(`should have as title 'Brian\'s Cloud POC'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('cloud-poc');
+    expect(app.title).toEqual('Brian\'s Cloud POC');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('cloud-poc app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Brian\'s Cloud POC is running!');
   });
 });
